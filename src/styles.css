@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+/* Import icons */
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'); /* menu icon */
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');/* menu icon2 */
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'); /* search icon */
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'); /* search icon2 */
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'); /* back icon */
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');/* back icon2 */
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'); /* List icon */
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'); /* share */
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'); /* corazon icon*/
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');/* coment icon*/
+@import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'); /* github icon*/
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'); /* book icon*/ 
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');/* book2 icon*/
+@import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'); /* instagram*/
+@import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'); /* facebook*/
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'); /* email*/
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Borel&family=PT+Sans&family=Roboto+Condensed:wght@300;400&family=Titillium+Web:wght@300;400&family=Ubuntu:wght@300&display=swap');

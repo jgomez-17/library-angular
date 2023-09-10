@@ -1,0 +1,200 @@
+.book-details {
+    display: flex;
+    margin-top: 7rem;
+    justify-content: center;
+}
+
+.book-details h1 {
+  width: 89%;
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-left: 0.4rem;
+}
+.book-details p {
+  margin-left: 0.4rem;
+}
+
+.details-container {
+  display: flex;
+  max-height: 370px;
+  font-family: 'Roboto Condensed', sans-serif;
+  width: 40%;
+  flex-direction: column;
+  margin-left: 3rem;
+  padding: 5px;
+  border-radius: 0.5rem;
+  background: whitesmoke;
+}
+
+img {
+    width: 300px;
+    height: 360px;
+    border-radius: 0.5rem;
+}
+
+
+/* MENU SUPERIOR */
+nav {
+  margin-top: 3rem;
+}
+
+button {
+    background: transparent;
+    padding: 7px 11px 4px 11px;
+    margin-left: 1rem;
+    border: none;
+    transition: 0.9s;
+    transition: 0.7s;
+}
+
+button i {
+  font-weight: bold;
+}
+
+
+/* button:hover {
+    background: rgb(234, 234, 234);
+} */
+
+/* Estilos para la caja de descripción */
+.description-box {
+    background: rgb(255, 255, 255);
+    font-size: 0.9rem;
+    height: 276px; /* Altura máxima deseada */
+    width: 450px;
+    overflow-y: auto; /* Agrega una barra de desplazamiento vertical si es necesario */
+    border-radius: 0.5rem;
+    border: 1px solid transparent; /* Borde opcional para resaltar el área */
+    padding: 10px; /* Espacio interno opcional */
+  }
+
+  /* Estilos personalizados para el scrollbar vertical */
+.description-box::-webkit-scrollbar {
+    width: 10px; /* Ancho del scrollbar */
+  }
+  
+  .description-box::-webkit-scrollbar-thumb {
+    background-color: rgba(67, 67, 67, 0.573); /* Color del thumb (la parte que se arrastra) */
+    border-radius: 5px; /* Borde redondeado del thumb */
+    transition: 0.6s;
+  }
+  
+  .description-box::-webkit-scrollbar-thumb:hover {
+    background-color: #5a5a5ac3; /* Cambio de color en hover */
+  }
+
+
+  /* i {
+    color: rgb(215, 46, 46);
+    border: 1px solid black;
+  } */
+
+  /* menu desplegable */
+.dropdown-menu {
+    background: transparent;
+    max-width: 2.6rem;
+    border: none;
+}
+.dropdown-menu li{
+    border-radius: 1rem;
+    background: whitesmoke;
+    backdrop-filter: blur(30px);
+    max-width: 2.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-menu a {
+    display: flex;
+    justify-content: center;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+
+
+.dropdown-menu a:hover {
+    background: white;
+}
+
+
+    /* MEDIA QUERIES ( MEDIUM DEVICES) */
+@media screen and (max-width: 1024px) {
+
+  .book-details {
+    display: flex;
+  }
+  .details-container {
+    margin-left: 1rem;
+    max-height: 370px;
+  }
+  .book-details h1 {
+    font-weight: bold;
+    font-size: 1.8rem;
+    width: 90%;
+  }
+  .book-details p {
+    font-size: 0.8rem;
+  }
+  img {
+    width: 230px;
+    height: 370px;
+  }
+  .description-box {
+    font-size: 0.7rem;
+    height: 300px; /* Altura máxima deseada */
+    width: 250px;
+  }
+
+  button i {
+    font-size: 1.2rem;
+  }
+}
+
+/* MEDIA QUERIES ( SMALL DEVICES) */
+@media screen and (max-width: 600px) {
+
+  .book-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .details-container {
+    display: flex;
+    flex-direction: column;
+    background: none;
+    max-height: 340px;
+    width: 50%;
+    margin-top: 2rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .book-details h1 {
+    margin-left: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 100%;
+  }
+  .book-details p {
+    margin-left: 0;
+    font-size: 0.9rem;
+  }
+  img {
+    width: 220px;
+    height: 340px;
+  }
+  .description-box {
+    font-size: 0.8rem;
+    height: 245px; /* Altura máxima deseada */
+    width: 250px;
+  }
+
+  button i {
+    font-size: 1.2rem;
+  }
+}

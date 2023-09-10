@@ -1,0 +1,52 @@
+ul {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
+    font-size: 1.7rem;
+    transition: 0.2s;
+    height: 60px;
+}
+
+
+li {
+    cursor: pointer;
+    padding: 3.5px;
+}
+
+li i {
+    font-size: 1.3rem;
+}
+li i:hover {
+    color: rgb(63, 63, 63);
+}
+
+
+/* BOTON DESPLEGABLE */
+/* CSS para el dropdown cuando está desplegado */
+.dropdown-menu {
+    border: none;
+}
+.dropdown-menu li{
+    padding: 0.5rem;
+    display: grid;
+    grid-gap: 0.5rem;
+    border-radius: 0.5rem;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-menu a {
+    display: flex;
+    justify-content: center;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background: whitesmoke;
+    backdrop-filter: blur(30px);
+}
+
+
+

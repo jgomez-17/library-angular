@@ -1,0 +1,20 @@
+<ul class="nav justify-content-around bg-white fixed-top navbar-light z-1">
+    <li class="nav-item">
+        <div class="input-group bg-light rounded-pill">
+          <input type="text" class="form-control" [(ngModel)]="searchQuery" placeholder="Search" (keyup.enter)="searchBooks()">
+          <button class="btn" (click)="searchBooks()">
+            <i class="fi fi-bs-search"></i>
+          </button>
+        </div>
+      </li>      
+</ul>
+
+
+<!-- book-list.component.html -->
+<div style="display: flex; width: 100%; justify-content: center;">
+    <div class="books-container">
+        <div *ngFor="let book of books" class="book">
+            <img *ngIf="book.volumeInfo.imageLinks" [src]="book.volumeInfo.imageLinks.thumbnail" alt="{{ book.volumeInfo.title }}" (click)="onSelectBook(book.id)">
+        </div>
+    </div>
+</div>

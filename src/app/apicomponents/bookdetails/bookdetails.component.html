@@ -1,0 +1,43 @@
+<ul class="nav bg-white justify-content-around d-flex fixed-top" style="margin-top: 4rem; padding-top: 1rem;">
+    <li class="nav-item">
+        <button class="rounded-circle" (click)="goBack()">
+            <i class="fi fi-bs-angle-small-left" style="font-size: 1.5rem;"></i>
+        </button>
+    </li>
+
+    <li class="nav-item" style="font-size: 1.3rem;">
+        <a>
+            <button class="btn rounded-circle" role="button" data-bs-toggle="button" aria-pressed="false">
+                <i class="fi fi-sr-heart"></i>
+            </button>
+            <button class="btn rounded-circle" role="button" data-bs-toggle="button" aria-pressed="false">
+                <i class="fi fi-sr-comment-alt"></i>
+            </button>
+            <button class="btn rounded-circle" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-pressed="false">
+                <i class="fi fi-sr-share"></i>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a style="color: blueviolet;" href="#"><i class="fi fi-brands-instagram"></i></a>
+                        <a style="color: blue;" href="#"><i class="fi fi-brands-facebook"></i></a>
+                        <a style="color: black;" href="#"><i class="fi fi-sr-envelope"></i></a>
+                    </li>
+                </ul>
+            </button>
+        </a>
+    </li>
+</ul>
+
+
+<div style="margin-top: 9rem;" *ngIf="bookDetails" class="book-details" [@zoomInOut]>
+    <div>
+        <img *ngIf="bookDetails.volumeInfo.imageLinks" [src]="bookDetails.volumeInfo.imageLinks.thumbnail" alt="{{ bookDetails.volumeInfo.title }}">
+    </div>
+    <div class="details-container">
+        <h1>{{ bookDetails.volumeInfo.title }}</h1>
+        <p>Autor(es): {{ bookDetails.volumeInfo.authors?.join(', ') }}</p>
+        <div class="description-box">
+            <div [innerHTML]="sanitizeDescription(bookDetails.volumeInfo.description)"></div>
+        </div>
+    </div>
+</div>
+
