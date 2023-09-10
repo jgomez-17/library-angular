@@ -11,6 +11,9 @@ li {
     cursor: pointer;
     padding: 3.5px;
 }
+li a {
+    text-decoration: none;
+}
 
 li i {
     font-size: 1.3rem;
