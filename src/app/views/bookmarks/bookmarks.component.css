@@ -1,0 +1,39 @@
+ul h4 {
+    font-family: 'Fjalla One', sans-serif;
+    margin-top: 0.5rem;
+}
+
+.favorites-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+}
+
+.bookfavorite-card {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem;
+    border-radius: 0.5rem;
+    align-items: center;
+    width: 200px;
+    height: 400px;
+}
+
+.bookfavorite-card img {
+    width: 190px;
+    height: 260px;
+    border-radius: 0.5rem;
+}
+
+.bookfavorite-details {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    max-width: 200px;
+    max-height:50px;
+}
+.bookfavorite-details h3 {
+    font-size: 0.9rem;
+}

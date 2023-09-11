@@ -9,6 +9,7 @@ import { BookdetailsComponent } from './apicomponents/bookdetails/bookdetails.co
 import { HomeComponent } from './views/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BookmarksComponent } from './views/bookmarks/bookmarks.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     GooglebooksComponent,
     BookdetailsComponent,
-    HomeComponent
+    HomeComponent,
+    BookmarksComponent
   ],
   imports: [
     BrowserModule,

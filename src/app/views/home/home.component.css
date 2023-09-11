@@ -1,25 +1,28 @@
 ul {
-    font-family: 'Titillium Web', sans-serif;
     font-weight: bold;
-    font-size: 1.7rem;
+    font-size: 1.9rem;
     transition: 0.2s;
     height: 60px;
 }
 
-
 li {
     cursor: pointer;
-    padding: 3.5px;
+    margin: 0.2rem;
 }
 li a {
     text-decoration: none;
 }
 
+.dropdown-menu a {
+    display: flex; 
+    flex-direction: column;
+}
+.dropdown-menu p {
+    font-size: 0.6rem;
+}
 li i {
     font-size: 1.3rem;
-}
-li i:hover {
-    color: rgb(63, 63, 63);
+    color: whitesmoke;
 }
 
 
@@ -27,6 +30,7 @@ li i:hover {
 /* CSS para el dropdown cuando está desplegado */
 .dropdown-menu {
     border: none;
+    background: transparent;
 }
 .dropdown-menu li{
     padding: 0.5rem;
@@ -41,13 +45,14 @@ li i:hover {
 .dropdown-menu a {
     display: flex;
     justify-content: center;
+    align-items: center;
     border-radius: 0.3rem;
     padding: 0.5rem;
     text-decoration: none;
 }
 
 .dropdown-menu a:hover {
-    background: whitesmoke;
+    background: rgb(59, 59, 59);
     backdrop-filter: blur(30px);
 }
 

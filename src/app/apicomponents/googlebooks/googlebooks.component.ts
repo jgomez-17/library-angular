@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { query } from '@angular/animations';
-
 
 @Component({
   selector: 'app-googlebooks',
   templateUrl: './googlebooks.component.html',
-  styleUrls: ['./googlebooks.component.css']
+  styleUrls: ['./googlebooks.component.css'],
 })
 export class GooglebooksComponent implements OnInit{
   books: any[] = [];

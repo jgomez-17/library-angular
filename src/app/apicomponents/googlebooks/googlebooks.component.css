@@ -13,8 +13,8 @@
     opacity: 0.8;
     display: flex;
     border-radius: 0.5rem;
-    height: 380px;
-    width: 260px;
+    height: 350px;
+    width: 250px;
     justify-content: center;
     align-items: center;
     /* border: 2px solid black; */
@@ -27,15 +27,15 @@
 
 .book img {
     border-radius: 0.5rem;
-    height: 375px;
-    width: 255px;
+    height: 300px;
+    width: 200px;
     display: block;
     transition: 0.1s;
 }
 
 .book img:hover {
-    height: 380px;
-    width: 360px;
+    height: 340px;
+    width: 240px;
     cursor: pointer;
 }
 
@@ -51,7 +51,10 @@ h2 {
   font-weight: bold;
 }
 li {
+  background: transparent;
   margin: 0.7rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgb(232, 232, 232);
 }
 i {
   margin-left: 9px;
@@ -63,31 +66,28 @@ li input[type="text"] {
     flex: 1;
     padding: 10px 18rem 10px 18px;
     border: 1px solid transparent;
-    /* box-shadow: 0 2px 4px rgb(232, 232, 232); */
+    box-shadow: 0 2px 4px rgb(232, 232, 232);
     border-radius: 1rem;
     outline: none;
     font-size: 0.8rem; /* Tamaño de fuente */
-    background-color: transparent; /* Fondo transparente */
+    background-color: white; /* Fondo transparente */
   }
 
   .input-group input:focus {
   outline: none; /* Quita el borde azul al hacer clic */
-  box-shadow: none; /* Quita la sombra al hacer clic */
 }
 
 li button {
+    background: white;
     color: #000000;
     border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    border-radius: 1rem;
   }
 li button i {
   padding: 0 10px 1px 2px;
   }
 
 li button:hover i {
-  background: transparent;
     color: blue;
   }
 

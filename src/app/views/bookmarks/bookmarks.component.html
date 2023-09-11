@@ -1,0 +1,36 @@
+<ul class="nav bg-light justify-content-between d-flex fixed-top" style="margin-top: 3.5rem; padding-top: 1rem;">
+    <li class="nav-item d-flex">
+        <button class="btn rounded-circle" (click)="goBack()">
+            <i class="fi fi-bs-angle-small-left" style="font-size: 1.5rem;"></i>
+        </button>
+        <h4> Favorite Books </h4>
+    </li>
+</ul>
+
+
+<!-- FAVORITOS -->
+<div style="margin-top: 9rem;" class="favorites-container">
+    
+    <div *ngIf="bookmarks.length === 0" class="empty-message">
+      No tienes ningún libro marcado como favorito.
+    </div>
+    <div *ngFor="let bookId of bookmarks" class="bookfavorite-card">
+      <!-- Aquí puedes mostrar los detalles de los libros marcados -->
+      <!-- Por ejemplo, muestra el título y la portada del libro -->
+      <div class="book-thumbnail">
+        <img [src]="'https://books.google.com/books/content?id=' + bookId + '&printsec=frontcover&img=1&zoom=1'" alt="Portada del libro">
+      </div>
+      <div class="bookfavorite-details bg-primary">
+        <h3>Título del Libro</h3>
+        <!-- Agrega más detalles aquí, como autor, fecha de publicación, etc. -->
+  
+        <!-- Botón para quitar el marcado del libro -->
+        <button (click)="removeBookmark(bookId)" class="remove-button btn btn-dark">
+            <i class="fi fi-ss-trash"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+
+  

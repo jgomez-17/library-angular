@@ -16,7 +16,7 @@
 
 .details-container {
   display: flex;
-  max-height: 370px;
+  max-height: 360px;
   font-family: 'Roboto Condensed', sans-serif;
   width: 40%;
   flex-direction: column;
@@ -119,6 +119,21 @@ button i {
     background: white;
 }
 
+/* MENSAJE FLOTANTE */
+/* bookdetails.component.css */
+
+.bookmark-message {
+  position: fixed;
+  top: 20%;
+  right: 20%;
+  background-color: #efefef91;
+  color: black;
+  padding: 10px;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+
 
     /* MEDIA QUERIES ( MEDIUM DEVICES) */
 @media screen and (max-width: 1024px) {
@@ -144,7 +159,7 @@ button i {
   }
   .description-box {
     font-size: 0.7rem;
-    height: 300px; /* Altura máxima deseada */
+    height: 300px; 
     width: 250px;
   }
 
@@ -190,7 +205,7 @@ button i {
   }
   .description-box {
     font-size: 0.8rem;
-    height: 245px; /* Altura máxima deseada */
+    height: 245px; 
     width: 250px;
   }
 
