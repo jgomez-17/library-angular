@@ -14,6 +14,8 @@ export class BookmarkserviceService {
     }
    }
 
+
+   //Funcion para marcar libros como favoritos 
    getBookmarks(): string[] {
     return Array.from(this.bookmarks);
    }

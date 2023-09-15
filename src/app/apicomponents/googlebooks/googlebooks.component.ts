@@ -40,13 +40,11 @@ export class GooglebooksComponent implements OnInit{
 
     this.http.get(url).subscribe(
       (data: any) => {
-        console.log(data); // Imprime la respuesta en la consola
         if (data.items) {
           this.books = data.items;
         } else {
           this.books = [];
       }
-
       
       this.router.navigate([], {
         relativeTo: this.route,

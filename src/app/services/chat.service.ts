@@ -22,8 +22,7 @@ export class ChatService {
       const requestBody = {
         model: 'gpt-3.5-turbo',
         messages: [
-          { role: 'system', content: 'You are a helpful assistant.' }
-          // Agrega más mensajes según tu conversación
+          { role: 'system', content: 'Muestrame los principales lenguajes de programacion' }
         ]
       };
   

@@ -22,8 +22,7 @@ export class BookdetailsComponent implements OnInit {
 
   bookDetails: any; // aqui almaceno los detalles del libro 
   searchQuery: string = '';
-  isSelected = false; // control de estado de los botones
-  isBookmarked = false; // Variable para controlar el mensaje flotante
+  isBookmarked = false;
   purchaseInfo: any; // Información de compra
 
   constructor(
@@ -63,12 +62,12 @@ export class BookdetailsComponent implements OnInit {
     this.location.back();
   }
 
-    // Toggle para agregar/quitar el libro de marcadores
+    // Toggle para agregar y quitar el libro de favoritos
     toggleBookmark(bookId: string): void {
       this.bookmarkService.toggleBookmark(bookId);
       this.isBookmarked = true;
 
-      // tiempo de duracion del mensaje de aviso 
+    // tiempo de duracion del mensaje de aviso 
     setTimeout(() => {
       this.isBookmarked = false;
     }, 800);

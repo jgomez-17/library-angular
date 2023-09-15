@@ -25,8 +25,8 @@ export class BookmarksComponent implements OnInit{
   // Función para quitar el marcado de un libro
   removeBookmark(bookId: string): void {
     this.bookmarkService.toggleBookmark(bookId); // Llama al método del servicio para quitar el marcado
-    // Actualiza la lista de marcadores después de quitar el marcado
-    this.bookmarks = this.bookmarkService.getBookmarks();
+    
+    this.bookmarks = this.bookmarkService.getBookmarks();// Actualiza la lista de marcadores después de quitar el marcado
   }
 
     //Boton de back
