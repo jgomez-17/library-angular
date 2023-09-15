@@ -1,0 +1,27 @@
+.chat-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chat-section {
+  border: 1px solid blueviolet;
+  margin-top: 10rem;
+  padding: 10rem 3rem 1rem 3rem;
+  border-radius: 1rem;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 4px rgb(155, 155, 155);
+}
+
+input {
+  border: 1px solid transparent;
+  padding: 0.5rem;
+  box-shadow: 0 2px 4px rgb(232, 232, 232);
+}
+
+button {
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+}

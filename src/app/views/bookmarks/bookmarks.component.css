@@ -10,7 +10,7 @@ ul h4 {
 }
 
 .bookfavorite-card {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,6 +25,11 @@ ul h4 {
     width: 190px;
     height: 260px;
     border-radius: 0.5rem;
+    transition: 0.1s;
+}
+.bookfavorite-card img:hover {
+    width: 195px;
+    height: 265px;
 }
 
 .bookfavorite-details {
@@ -35,5 +40,14 @@ ul h4 {
     max-height:50px;
 }
 .bookfavorite-details h3 {
+    font-size: 0.9rem;
+}
+
+.bookfavorite-details button {
+    border: none;
+}
+
+.empty-message {
+    font-family: 'Fjalla One', sans-serif;
     font-size: 0.9rem;
 }

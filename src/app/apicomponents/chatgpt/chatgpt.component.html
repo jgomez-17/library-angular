@@ -1,0 +1,26 @@
+
+<ul class="nav bg-light justify-content-center d-flex fixed-top" style="margin-top: 3.5rem; padding-top: 1rem;">
+  <li class="nav-item d-flex">
+      <h4> Chat GPT </h4>
+  </li>
+</ul>
+
+
+<div class="chat-container">
+  <div class="chat-section">
+    <div style="margin-top: 10rem;">
+      <input class="rounded-pill" [(ngModel)]="query" placeholder="send a message">
+      <button (click)="search()" class="rounded-circle">
+        <i class="fi fi-rr-arrow-small-right">
+        </i>
+      </button>
+    </div>
+    
+    <div *ngIf="response">
+      <h3>Respuesta:</h3>
+      <p>{{ response }}</p>
+    </div>
+  </div>
+  
+  </div>
+

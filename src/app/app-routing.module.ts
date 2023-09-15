@@ -4,6 +4,7 @@ import { HomeComponent } from './views/home/home.component';
 import { GooglebooksComponent } from './apicomponents/googlebooks/googlebooks.component';
 import { BookdetailsComponent } from './apicomponents/bookdetails/bookdetails.component';
 import { BookmarksComponent } from './views/bookmarks/bookmarks.component';
+import { ChatgptComponent } from './apicomponents/chatgpt/chatgpt.component';
 
 const routes: Routes = [
   { path:'', redirectTo: '/googlebooks', pathMatch: 'full'},
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path:'googlebooks', component: GooglebooksComponent},
   { path:'book/:id', component: BookdetailsComponent}, //ruta del componente dinamico
   { path:'bookmarks', component: BookmarksComponent}, //pagina de marcadores
+  { path:'chatgpt', component:ChatgptComponent}
 ];
 
 @NgModule({

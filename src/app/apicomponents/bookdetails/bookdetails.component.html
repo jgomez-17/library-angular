@@ -1,12 +1,12 @@
 <!-- Barra de navegacion -->
-<ul class="nav bg-light justify-content-around d-flex fixed-top" style="margin-top: 3.5rem; padding-top: 1rem;">
+<ul class="nav bg-light justify-content-between d-flex fixed-top" style="margin-top: 3.5rem; padding-top: 1rem;">
     <li class="nav-item">
         <button class="rounded-circle" (click)="goBack()">
             <i class="fi fi-bs-angle-small-left" style="font-size: 1.5rem;"></i>
         </button>
     </li>
 
-    <li class="nav-item" style="font-size: 1.3rem;">
+    <li class="nav-item" style="font-size: 1.3rem; margin-right: 2rem;">
         <a>
             <button class="btn" (click)="toggleBookmark(bookDetails.id)"role="button" data-bs-toggle="button" aria-pressed="false">
                 <i class="fi fi-sr-heart"></i>
@@ -14,19 +14,6 @@
                     ¡Libro marcado como favorito!
                 </div>
             </button> 
-            <button class="btn rounded-circle" role="button" data-bs-toggle="button" aria-pressed="false">
-                <i class="fi fi-sr-comment-alt"></i>
-            </button>
-            <button class="btn rounded-circle" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-pressed="false">
-                <i class="fi fi-sr-share"></i>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a style="color: blueviolet;" href="#"><i class="fi fi-brands-instagram"></i></a>
-                        <a style="color: blue;" href="#"><i class="fi fi-brands-facebook"></i></a>
-                        <a style="color: black;" href="#"><i class="fi fi-sr-envelope"></i></a>
-                    </li>
-                </ul>
-            </button>
         </a>
     </li>
 </ul>
@@ -43,5 +30,41 @@
             <div [innerHTML]="sanitizeDescription(bookDetails.volumeInfo.description)"></div>
         </div>
     </div>
+
+    <div class="share-container">
+        <button class="btn btn-success">
+            <a href="whatsapp://send?text=¡Hola! Te recomiendo este libro: {{bookDetails.volumeInfo.title}}. Puedes encontrar más información aquí: {{getEncodedUrl()}}" target="_blank">
+                <i class="fi fi-brands-whatsapp"></i>
+            </a>
+        </button>
+        <button class="btn btn-primary">
+            <a href="https://twitter.com/intent/tweet?url={{getEncodedUrl()}}&text={{bookDetails.volumeInfo.title}}" target="_blank">
+                <i class="fi fi-brands-twitter"></i>
+            </a>
+        </button>
+        <button class="btn btn-dark">
+            <a href="mailto:?subject=Recomendación de libro&body=¡Hola! Te recomiendo este libro: {{bookDetails.volumeInfo.title}}. Puedes encontrar más información aquí: {{getEncodedUrl()}}">
+                <i class="fi fi-sr-envelope"></i>
+            </a>
+        </button>
+    </div>
 </div>
+
+                    <!-- Información de Compra -->
+<div *ngIf="purchaseInfo" class="purchase-info">
+    <p class="d-flex" *ngIf="purchaseInfo.saleability === 'FOR_SALE'">
+        <span class="text-success">Available for purchase.</span>
+        Price: ${{ purchaseInfo.listPrice.amount }} {{ purchaseInfo.listPrice.currencyCode }}
+    </p>
+    <p *ngIf="purchaseInfo.saleability !== 'FOR_SALE'">
+        <span class="text-danger">This book is not available for online purchase.</span>
+    </p>
+    <div *ngIf="purchaseInfo && purchaseInfo.buyLink">
+        <a class="btn btn-light" [href]="purchaseInfo.buyLink" target="_blank" rel="noopener noreferrer">
+            <i class="fi fi-sr-shopping-cart"></i>
+        </a>
+    </div> 
+</div>
+
+
 

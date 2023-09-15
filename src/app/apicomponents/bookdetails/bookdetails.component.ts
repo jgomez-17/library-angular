@@ -24,6 +24,7 @@ export class BookdetailsComponent implements OnInit {
   searchQuery: string = '';
   isSelected = false; // control de estado de los botones
   isBookmarked = false; // Variable para controlar el mensaje flotante
+  purchaseInfo: any; // Información de compra
 
   constructor(
     private route: ActivatedRoute,
@@ -40,7 +41,13 @@ export class BookdetailsComponent implements OnInit {
       // Realizo una solicitud http para obtener los detalles del libro según el bookId.
       this.http.get(`https://www.googleapis.com/books/v1/volumes/${bookId}`).subscribe(
         (data: any) => {
-        this.bookDetails = data; // Asigna los detalles del libro a la propiedad bookDetails.
+        this.bookDetails = data; // Aquí asigno los detalles del libro a la propiedad bookDetails.
+        this.purchaseInfo = data.saleInfo; // Información de compra
+
+        if (this.purchaseInfo && this.purchaseInfo.buyLink) {
+          const buyLink = this.purchaseInfo.buyLink;
+          console.log('Enlace de compra:', buyLink);
+        }
       });
     });
   }
@@ -61,16 +68,14 @@ export class BookdetailsComponent implements OnInit {
       this.bookmarkService.toggleBookmark(bookId);
       this.isBookmarked = true;
 
-      // Después de un tiempo, oculta el mensaje flotante (puedes ajustar el tiempo según tus preferencias)
+      // tiempo de duracion del mensaje de aviso 
     setTimeout(() => {
       this.isBookmarked = false;
-    }, 500);
+    }, 800);
   }
 
-  //control de estado de los botones
-
-  // toggleSelection() {
-  //   this.isSelected = !this.isSelected;
-  // }
-
+  // Método para obtener la URL del libro codificada
+  getEncodedUrl(): string {
+    return encodeURIComponent(window.location.href);
+  }
 }

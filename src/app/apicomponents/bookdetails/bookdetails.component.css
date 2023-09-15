@@ -1,3 +1,6 @@
+* {
+  font-family: 'Roboto Condensed', sans-serif;
+}
 .book-details {
     display: flex;
     margin-top: 7rem;
@@ -17,7 +20,6 @@
 .details-container {
   display: flex;
   max-height: 360px;
-  font-family: 'Roboto Condensed', sans-serif;
   width: 40%;
   flex-direction: column;
   margin-left: 3rem;
@@ -52,30 +54,26 @@ button i {
 }
 
 
-/* button:hover {
-    background: rgb(234, 234, 234);
-} */
-
 /* Estilos para la caja de descripción */
 .description-box {
     background: rgb(255, 255, 255);
     font-size: 0.9rem;
-    height: 276px; /* Altura máxima deseada */
+    height: 276px;
     width: 450px;
-    overflow-y: auto; /* Agrega una barra de desplazamiento vertical si es necesario */
+    overflow-y: auto;
     border-radius: 0.5rem;
-    border: 1px solid transparent; /* Borde opcional para resaltar el área */
-    padding: 10px; /* Espacio interno opcional */
+    border: 1px solid transparent; 
+    padding: 10px; 
   }
 
-  /* Estilos personalizados para el scrollbar vertical */
+  /* Estilos para el scrollbar vertical */
 .description-box::-webkit-scrollbar {
-    width: 10px; /* Ancho del scrollbar */
+    width: 10px;
   }
   
   .description-box::-webkit-scrollbar-thumb {
-    background-color: rgba(67, 67, 67, 0.573); /* Color del thumb (la parte que se arrastra) */
-    border-radius: 5px; /* Borde redondeado del thumb */
+    background-color: rgba(67, 67, 67, 0.573); 
+    border-radius: 5px; 
     transition: 0.6s;
   }
   
@@ -84,48 +82,12 @@ button i {
   }
 
 
-  /* i {
-    color: rgb(215, 46, 46);
-    border: 1px solid black;
-  } */
-
-  /* menu desplegable */
-.dropdown-menu {
-    background: transparent;
-    max-width: 2.6rem;
-    border: none;
-}
-.dropdown-menu li{
-    border-radius: 1rem;
-    background: whitesmoke;
-    backdrop-filter: blur(30px);
-    max-width: 2.6rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.dropdown-menu a {
-    display: flex;
-    justify-content: center;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    text-decoration: none;
-}
-
-
-.dropdown-menu a:hover {
-    background: white;
-}
-
-/* MENSAJE FLOTANTE */
-/* bookdetails.component.css */
+/* MENSAJE DE MARCADO COMO FAVORITO */
 
 .bookmark-message {
   position: fixed;
   top: 20%;
-  right: 20%;
+  right: 1%;
   background-color: #efefef91;
   color: black;
   padding: 10px;
@@ -133,6 +95,32 @@ button i {
   z-index: 1000;
 }
 
+.share-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.share-container a{
+  color: black;
+  text-decoration: none;
+}
+
+
+/* INFORMACION DE COMPRA */
+
+.purchase-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.purchase-info p {
+  background: whitesmoke;
+  border-radius: 0.5rem;
+  padding: 0.43rem;
+  flex-direction: column;
+}
 
 
     /* MEDIA QUERIES ( MEDIUM DEVICES) */
@@ -211,5 +199,9 @@ button i {
 
   button i {
     font-size: 1.2rem;
+  }
+  .share-container {
+    margin: 1rem;
+    flex-direction: row;
   }
 }

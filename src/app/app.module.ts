@@ -10,7 +10,7 @@ import { HomeComponent } from './views/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BookmarksComponent } from './views/bookmarks/bookmarks.component';
-
+import { ChatgptComponent } from './apicomponents/chatgpt/chatgpt.component';
 
 @NgModule({
   declarations: [
@@ -18,14 +18,16 @@ import { BookmarksComponent } from './views/bookmarks/bookmarks.component';
     GooglebooksComponent,
     BookdetailsComponent,
     HomeComponent,
-    BookmarksComponent
+    BookmarksComponent,
+    ChatgptComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
