@@ -45,7 +45,6 @@ export class BookdetailsComponent implements OnInit {
 
         if (this.purchaseInfo && this.purchaseInfo.buyLink) {
           const buyLink = this.purchaseInfo.buyLink;
-          console.log('Enlace de compra:', buyLink);
         }
       });
     });
