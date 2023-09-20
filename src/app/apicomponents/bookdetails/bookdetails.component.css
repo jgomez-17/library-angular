@@ -109,17 +109,30 @@ button i {
 /* INFORMACION DE COMPRA */
 
 .purchase-info {
+  width: 55%;
+  float: right;
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin: 2rem 2rem 0 0;
+  gap: 1rem;
 }
 
-.purchase-info p {
+.purchase-info h6 {
+  padding: 0.3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   background: whitesmoke;
   border-radius: 0.5rem;
-  padding: 0.43rem;
-  flex-direction: column;
+}
+
+.btn {
+  transition: 0.3s;
+}
+
+.btn:hover {
+  color: rgb(0, 119, 255);
 }
 
 
@@ -153,6 +166,14 @@ button i {
 
   button i {
     font-size: 1.2rem;
+  }
+
+  .purchase-info {
+    width: 53%;
+  }
+
+  .purchase-info h6 {
+    font-size: 0.8rem;
   }
 }
 
@@ -203,5 +224,13 @@ button i {
   .share-container {
     margin: 1rem;
     flex-direction: row;
+  }
+
+  .purchase-info {
+    width: 72%;
+  }
+
+  .purchase-info h6 {
+    font-size: 0.8rem;
   }
 }

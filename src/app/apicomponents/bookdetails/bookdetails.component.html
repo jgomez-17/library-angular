@@ -52,18 +52,18 @@
 
                     <!-- Información de Compra -->
 <div *ngIf="purchaseInfo" class="purchase-info">
-    <p class="d-flex" *ngIf="purchaseInfo.saleability === 'FOR_SALE'">
-        <span class="text-success">Available for purchase.</span>
-        Price: ${{ purchaseInfo.listPrice.amount }} {{ purchaseInfo.listPrice.currencyCode }}
-    </p>
-    <p *ngIf="purchaseInfo.saleability !== 'FOR_SALE'">
-        <span class="text-danger">This book is not available for online purchase.</span>
-    </p>
-    <div *ngIf="purchaseInfo && purchaseInfo.buyLink">
-        <a class="btn btn-light" [href]="purchaseInfo.buyLink" target="_blank" rel="noopener noreferrer">
-            <i class="fi fi-sr-shopping-cart"></i>
-        </a>
-    </div> 
+        <h6 *ngIf="purchaseInfo.saleability === 'FOR_SALE'">
+            <span class="text-success mx-3">Available for purchase.</span>
+            Price: ${{ purchaseInfo.listPrice.amount }} {{ purchaseInfo.listPrice.currencyCode }}
+        </h6>
+        <h6 *ngIf="purchaseInfo.saleability !== 'FOR_SALE'">
+            <span class="text-danger">This book is not available for online purchase.</span>
+        </h6>
+        <div *ngIf="purchaseInfo && purchaseInfo.buyLink">
+            <a class="btn btn-small" [href]="purchaseInfo.buyLink" target="_blank" rel="noopener noreferrer">
+                <i class="fi fi-sr-shopping-cart"></i>
+            </a>
+        </div> 
 </div>
 
 
